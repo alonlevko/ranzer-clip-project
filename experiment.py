@@ -15,7 +15,7 @@ class CFG:
     model_name = 'resnext50_32x4d'
     size = 400
     scheduler = 'CosineAnnealingLR'
-    epochs = 6
+    epochs = 15
     T_max = 6
     lr = 1e-4
     min_lr = 1e-6
@@ -419,9 +419,9 @@ def main():
                               num_workers=CFG.num_workers, pin_memory=True, drop_last=False)
     test_ids_list = test_data['StudyInstanceUID'].tolist()
     data_csv_path = {
-                    #'data/Fake_data_unet_mask_copy': "data/Fake_data_unet_mask_copy/train_f.csv",
+                    'data/Fake_data_unet_mask_copy': "data/Fake_data_unet_mask_copy/train_f.csv",
                     "data/Fake_data_simple_mask_copy": "data/Fake_data_simple_mask_copy/train_f.csv",
-                    #"data/Competition_data/train": "data/Competition_data/train.csv"
+                    "data/Competition_data/train": "data/Competition_data/train.csv"
     }
     for train_path, train_csv in data_csv_path.items():
         train = pd.read_csv(train_csv)
