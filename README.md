@@ -24,4 +24,4 @@ Unet_pre_train.py is the script we wrote and used for pre training our Unet for 
 Unet_Prediction.py is a script we wrote and used for visualizing segmentation results of the Unet.
 
 experiment.py is the script we wrote and used for the last part of out workflow, were it splits the test-set, trains
-models and the 3 datasets and checks the score for each model on the dataset. 
+models on the 3 datasets and checks the score for each model on the test dataset. 
